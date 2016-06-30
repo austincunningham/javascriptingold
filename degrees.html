@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p>This example calls a function to convert from Fahrenheit to Celcius:</p>
+
+<!--puts a box on the screen looking for text id identifies the html element that can be passed to js-->
+<input id="numb" type="text">
+<!-- puts a button on the screen that will pass to js function -->
+<button type="button" onclick="toCelcius()">Convert</button>
+<!--id variable can be passed in and out of js -->
+<p id="demo"></p>
+<!--calling java script -->
+<script>
+
+// different language different comment, js function toCelcius() which was called above is now run
+function myFunction() {
+    var x = document.getElementById("demo");
+    x.style.fontSize = "200px";           
+    x.style.color = "green"; 
+}
+function toCelcius() {
+   var f, ctemp; //declare variables 
+   f = document.getElementById("numb").value; //get the value numb typed in above and let it equal f
+   ctemp = (5/9) * (f-32); // how to covert the temp in math and pass to variable ftemp
+   document.getElementById("demo").innerHTML = ctemp + " C";// sent ftemp back to html
+}
+ 
+</script>
+
+<p>This example calls a function to convert from Celcius to Fahrenheit:</p>
+
+<!-- see above all steps are the same but the conversion equation is different and variables are also different -->
+<input id="cel" type="text">
+
+<button type="button" onclick="toFahrenheit()">Convert</button>
+
+<p id="memo"></p>
+<!-- -->
+<script>
+function toFahrenheit() {
+   var c, ftemp;
+   c = document.getElementById("cel").value;
+   ftemp =((c*9)/5) + 32;
+   document.getElementById("memo").innerHTML = ftemp + " F";
+}
+ 
+</script>
+
+
+
+</body>
+</html>
